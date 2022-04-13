@@ -11,20 +11,19 @@
 测试页面2：
 
 <script>
-    console.log('hello')
-    // alert('hello')
+    // js 语句结尾的分号可不加，但建议同一个项目保持一致。如vue源码都不加
 
     // 声明了一个变量
     var age;
     age = 18;
-    console.log(age)
+    console.log(age);
 
     // 变量的初始化
     var myname = 'snow';
     console.log(myname);
 
-    var myname = prompt('输入你的名字');
-    alert(myname);
+    // var myname = prompt('输入你的名字');
+    // console.log(myname);
 
     // 初始化多个变量
     var myname = 'snow',
@@ -32,7 +31,51 @@
 
 
     // 使用驼峰命名(js命名规范)
-    var myName;
+    var myName
+
+    // number：八进制 0开头
+    var num = 012;
+    console.log(num);
+
+    // number：十六进制 0-9 a-f
+    var num2 = 0x1f;
+    console.log(num2);
+
+    // string, 推荐使用单引号
+    var str = 'hello';
+    console.log('str len: ' + str.length);
+
+    // isNaN 判断是否为非数字类型
+    console.log(isNaN(12)) // false
+
+    // boolean  true,false  1, 0
+    var flag = true;
+    console.log(1+flag); // 2
+
+    // undefined
+    var str1;
+    console.log(str1); // undefined
+    console.log(1+str1); // NaN 非数值类型
+
+    // null 空值
+    var space = null;
+    console.log(space);
+
+    // typeof 检查变量类型
+    console.log(typeof 18);
+    console.log(typeof 'hello');
+    console.log(typeof true);
+    console.log(typeof null);
+
+
+    // 类型装换
+    var num = 10;
+    var str = num.toString();
+    var str2 = String(num);
+    console.log(str);
+    console.log(str2);
+    console.log(typeof str2);
+
 
 
 
