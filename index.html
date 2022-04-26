@@ -30,6 +30,7 @@
     var myname = 'snow';
     console.log(myname);
 
+    // 内容输入
     // var myname = prompt('输入你的名字');
     // console.log(myname);
 
@@ -38,7 +39,7 @@
         age = 18;
 
 
-    // 使用驼峰命名(js命名规范)
+    // 推荐使用驼峰命名(js命名规范)
     var myName
 
     console.log('------------------------数据类型------------------------')
@@ -143,13 +144,35 @@
     console.log(arr[0])
 
     var a = [1, 2, 3, 4, 'red', 'green', 'blue', true, null] // 元素类型可以不同
-    console.log(a[1])
-    console.log(a[5])
+    console.log(a)
 
     for (var i = 0; i < a.length; i++) {
         console.log(a[i])
     }
 
+    console.log('------------------------function------------------------')
+
+    // 一般使用动词命名函数
+    function sayHi(name) {
+        return 'hi ' + name;
+    }
+
+    console.log(sayHi('tom'))
+
+    // 可变参数 arguments 可以获取参数
+    function fn() {
+        console.log(arguments)
+        console.log(arguments[0])
+        console.log(arguments.length)
+    }
+
+    fn(1, 2, 3, 4, 5)
+
+    // 函数表达式(匿名函数)，闭包？
+    var fn = function () {
+        console.log('fn')
+    }
+    fn()
 
 </script>
 
