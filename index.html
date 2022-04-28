@@ -169,10 +169,50 @@
     fn(1, 2, 3, 4, 5)
 
     // 函数表达式(匿名函数)，闭包？
-    var fn = function () {
-        console.log('fn')
+    var fn2 = function () {
+        console.log('fn2')
     }
-    fn()
+    fn2();
+
+    // 匿名函数
+    (function (i, j, k) {
+        console.log(i + j + k);
+    })(1, 3, 5);
+
+    // 函数闭包
+    // 闭包本身定义比较抽象，MDN官方上解释是：A closure is the combination of a function and the lexical environment within which that function was declared.
+    // 中文解释是：闭包是一个函数和该函数被定义时的词法环境的组合。
+    // 这个案例中用到的闭包其实是inner和inner被定义时的词法环境，这个闭包被return出来后被外部的outer引用，因此可以在box外部执行这个inner，inner能够读取到box内部的变量a。
+    // 使用这个闭包的目的是为了在box外部访问a，就是通过执行outer()。
+    function box() {
+        var a = 10;
+
+        function inner() {
+            return a;
+        }
+
+        return inner;
+    }
+
+    var outer = box();
+    console.log(outer());//10
+
+    console.log('------------------------作用域------------------------')
+    var fnum = 10; // 【全局变量】 （全局作用域），只有在浏览器关闭才释放，比较占用内存
+    function fn() {
+        console.log(fnum); // 10
+        var fnum2 = 20; // 【局部变量】 (函数作用域)，函数执行完毕销毁
+        console.log(fnum2);
+        fnum3 = 30 // 【全部变量】，函数内直接赋值的变量也是全局变量
+    }
+
+    fn();
+
+    // 目前没有块作用域
+    if (3 < 4) {
+        knum = 5;
+    }
+    console.log(knum)
 
 </script>
 
