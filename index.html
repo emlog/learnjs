@@ -137,7 +137,7 @@
         console.log(i)
     }
 
-    console.log('------------------------array------------------------')
+    console.log('------------------------数组 array------------------------')
 
     var arr = new Array()
     arr[0] = 12
@@ -150,7 +150,7 @@
         console.log(a[i])
     }
 
-    console.log('------------------------function------------------------')
+    console.log('------------------------函数 function------------------------')
 
     // 一般使用动词命名函数
     function sayHi(name) {
@@ -237,6 +237,54 @@
 
 
     console.log('------------------------对象object------------------------')
+
+    var obj = {} // 创建一个空的对象
+
+    // 初始化一个对象（1）
+    var obj2 = {
+        uname: 'snow',
+        age: 18,
+        sayHi: function () {
+            console.log('hi')
+        }
+    }
+
+    // 使用对象
+    console.log(obj2.uname)
+    console.log(obj2['uname'])
+    obj2.sayHi()
+
+    // 初始化一个对象（2）
+    var obj3 = new Object();
+    obj3.uname = 'tom'
+    obj.age = 18
+    obj.sayHi = function () {
+        console.log('hi')
+    }
+
+    // 构造函数 （类）
+    function Star(uname, age, sex) {
+        this.name = uname
+        this.age = age
+        this.sex = sex
+        this.sing = function (sang) {
+            console.log(sang)
+        }
+    }
+
+    // 对象（实例化）
+    var ldh = new Star('刘德华', 18, 'man')
+    console.log(ldh.name)
+    ldh.sing('冰雨')
+
+    // 对象遍历
+    for (var k in ldh) {
+        console.log(k)
+        console.log(ldh[k])
+    }
+
+    console.log('------------------------内置对象object------------------------')
+
 
 </script>
 
