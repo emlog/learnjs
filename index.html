@@ -35,8 +35,7 @@
     // console.log(myname);
 
     // 初始化多个变量
-    var myname = 'snow',
-        age = 18;
+    var myname = 'snow', age = 18;
 
 
     // 推荐使用驼峰命名(js命名规范)
@@ -209,7 +208,7 @@
     fn();
 
     // 目前没有块作用域
-    // ES6 新增了let命令，用来声明局部变量。它的用法类似于var，但是所声明的变量，只在let命令所在的代码块内有效，而且有暂时性死区的约束。
+    // ES6 新增了let命令，用来声明变量。它的用法类似于var，但是所声明的变量，只在let命令所在的代码块内有效，如果在代码块外使用，会报错。
 
     // ECMAScript 6.0（以下简称 ES6）是 JavaScript 语言的下一代标准，已经在 2015 年 6 月正式发布了。它的目标，是使得 JavaScript 语言可以用来编写复杂的大型应用程序，成为企业级开发语言。
     // ES6的let让js真正拥有了块级作用域，也是向这更安全更规范的路走，虽然加了很多约束，但是都是为了让我们更安全的使用和写代码。
@@ -284,6 +283,30 @@
     }
 
     console.log('------------------------内置对象object------------------------')
+    // 3种对象：自定义对象、内置对象、浏览器对象
+    // 内置对象（类似标准库）：js核心直接提供的内置对象方法：Math、Date、Array、String
+    // MDN文档（查阅内置对象）：https://developer.mozilla.org/zh-CN/
+
+    // Math
+    console.log(Math.PI)
+    console.log(Math.max(3, 2, 3, 455))
+
+    // Date() 日期对象是一个构造函数 必须使用new
+    var date = new Date();
+    console.log(date)
+    console.log(date.getDate())
+
+    // Array
+    let fruits = ['Apple', 'Banana']
+    console.log(fruits.length)
+
+    console.log(fruits instanceof Array) // instanceof 变量是否为数组
+
+    // String
+    // 字符串里的值不可变，重新赋值只是开辟了新的内存空间，并指向新的空间。原始内存空间不变。
+    var str = 'andy';
+    console.log(str.length) // 基本包装类型，让简单数据类型，具有复杂数据类型的方法。
+    console.log(str.indexOf('a'))
 
 
 </script>
