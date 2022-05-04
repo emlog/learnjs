@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name=renderer content=webkit>
+    <title></title>
+</head>
+<body>
+<div id="app">hello</div>
+
+<div>
+    <ul>
+        <li>hello1</li>
+        <li>hello2</li>
+        <li>hello3</li>
+        <li>hello4</li>
+    </ul>
+</div>
+
+<script>
+    console.log('------------------------web APIs------------------------')
+    // web api是w3c的标准
+    // web api是浏览器提供的一套浏览器功能和页面元素的API（BOM和DOM）
+    // web apis 文档：https://developer.mozilla.org/zh-CN/docs/Web/API
+
+    // DOM 文档对象模型 document object model
+    // dom 树，node节点
+    // dom的顶级对象是：document
+
+    // 根据id获取元素
+    var app = document.getElementById('app');
+    console.log(app);
+    console.log(typeof app);
+    console.dir(app);
+
+    // 根据标签名获取元素
+    var ls = document.getElementsByTagName('li');
+    console.log(ls);
+    console.log(ls[0]);
+
+
+</script>
+
+</body>
+</html>
