@@ -32,7 +32,13 @@
     // window.screen
     // window.document
 
-    window.alert('hello');
+    // window.alert('hello');
+
+    // 本地存储
+    // window.localStorage 容量：5M ，生命周期浏览器关闭，只能存储字符串
+    // window.sessionStorage  容量：20M，永不过期，除非手动清理。
+    localStorage.setItem('name', '张三');
+    console.log(localStorage.getItem('name'));
 
 
 </script>
